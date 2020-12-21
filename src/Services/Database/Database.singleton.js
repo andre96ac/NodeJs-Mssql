@@ -1,4 +1,5 @@
 "use strict";
+// Copyright 2020 Andrea Cuppini
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -33,14 +34,27 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateValue = exports.InsertValue = exports.SelectCondition = exports.QueryParam = exports.DatabaseService = void 0;
+// This file is part of ArduinoAcquario.
+// ArduinoAcquario is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// Nome-Programma is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with Nome-Programma.  If not, see <http://www.gnu.org/licenses/>.
+//############## SERVIZIO DI COLLEGAMENTO AL DB ###################
 var database = __importStar(require("mssql"));
 var DatabaseService = /** @class */ (function () {
     function DatabaseService() {
+        //##########################region parametri di connessione al DB Mssql ##########################
         this.configParams = {
-            server: 'DESKTOP-AKJ3HOS\\SQLEXPRESS',
-            user: 'sa',
-            password: 'prova1234',
-            database: 'RegistrazioneSeminario',
+            server: '',
+            user: '',
+            password: '',
+            database: '',
         };
     }
     Object.defineProperty(DatabaseService, "instance", {
@@ -80,7 +94,7 @@ var DatabaseService = /** @class */ (function () {
     /**
      * Esegue una query sul db
      * ############# ATTENZIONE! utilizzare solo stringhe parametrizzate per prevenire sql injecion #############
-     * @param strQuery la stringa TEMPLATE (es: SELECT @colonna FROM @tabella )
+     * @param strQuery la stringa TEMPLATE (es: SELECT @colonna FROM @tabella ) secondo specifiche Mssql
      * @param queryParams l'oggetto contenente i parametri (es: {colonna: 'nome', tabella: 'utente'})
      */
     DatabaseService.prototype._query = function (strQuery, queryParams) {
@@ -238,7 +252,7 @@ var DatabaseService = /** @class */ (function () {
                 _this._query(myQuery, values)
                     .then(function (result) {
                     console.log(result);
-                    resolve();
+                    resolve(result);
                 })
                     .catch(function (error) {
                     console.log(error);
@@ -287,7 +301,7 @@ var DatabaseService = /** @class */ (function () {
                 _this._query(finalString, finalQueryParams)
                     .then(function (result) {
                     console.log(result);
-                    resolve();
+                    resolve(result);
                 })
                     .catch(function (error) {
                     console.log(error);

@@ -1,4 +1,5 @@
 "use strict";
+// Copyright 2020 Andrea Cuppini
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -14,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PostResult = exports.Requests = exports.RequestError = exports.RouterService = void 0;
-var Structure_1 = require("../../Library/Structure");
+var Structure_1 = require("../../Library/Structure/Structure");
 var Database_singleton_1 = require("../Database/Database.singleton");
 var RouterService = /** @class */ (function () {
     function RouterService(request, response) {
@@ -86,7 +87,7 @@ var RouterService = /** @class */ (function () {
                     //controllo che il metodo richiesto sia abilitato per le web api
                     if (myDocument.isMethodEnabledForWebApi(method)) {
                         //tutto a posto, posso eseguire il metodo
-                        var result = myDocument[method]();
+                        var result = myDocument[method](this.req.body);
                         this.res.status(result.code).send(result.message);
                     }
                     else {
