@@ -34,8 +34,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateValue = exports.InsertValue = exports.SelectCondition = exports.QueryParam = exports.DatabaseService = void 0;
-// This file is part of ArduinoAcquario.
-// ArduinoAcquario is free software: you can redistribute it and/or modify
+// This file is part of Nodejs-Mssql.
+// Nodejs-Mssql is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
