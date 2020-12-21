@@ -1,5 +1,5 @@
 import { IdDocument } from "../../Library/IdDocument/IdDocument.document";
-import { DynamicClass } from "../../Library/Structure";
+import { DynamicClass } from "../../Library/Structure/Structure";
 import { DatabaseService, SelectCondition } from "../Database/Database.singleton";
 import express from 'express';
 import { request } from "http";

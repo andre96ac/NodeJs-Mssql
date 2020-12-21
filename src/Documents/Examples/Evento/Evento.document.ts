@@ -2,7 +2,7 @@
 //########### ESEMPIO D'USO ####################
 
 
-import { IdDocument } from "../../Library/IdDocument/IdDocument.document";
+import { IdDocument } from "../../../Library/IdDocument/IdDocument.document";
 
 export class Evento extends IdDocument{
     nome: string;
@@ -20,6 +20,7 @@ export class Evento extends IdDocument{
         }
 
         this.descriptor.className = 'Evento'
+        this.descriptor.enabledForWebApi = true;
 
 
 

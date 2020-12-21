@@ -1,9 +1,9 @@
-import { IdDocument } from './IdDocument/IdDocument.document'
-import { Account } from '../Documents/Account/Account.document'
-import { Evento } from '../Documents/Evento/Evento.document'
-import { Registrazione } from '../Documents/Registrazione/Registrazione.document'
-import { Titolo } from '../Documents/Titolo/Titolo.document'
-import { RequestError } from '../Services/Router/Router'
+import { IdDocument } from '../IdDocument/IdDocument.document'
+import { Account } from '../../Documents/Examples/Account/Account.document'
+import { Evento } from '../../Documents/Examples/Evento/Evento.document'
+import { Registrazione } from '../../Documents/Examples/Registrazione/Registrazione.document'
+import { Titolo } from '../../Documents/Examples/Titolo/Titolo.document'
+import { RequestError } from '../../Services/Router/Router'
 
 
 

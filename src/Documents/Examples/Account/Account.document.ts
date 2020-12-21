@@ -3,8 +3,8 @@
 
 
 
-import { IdDocument } from "../../Library/IdDocument/IdDocument.document";
-import { PostResult } from "../../Services/Router/Router";
+import { IdDocument } from "../../../Library/IdDocument/IdDocument.document";
+import { PostResult } from "../../../Services/Router/Router";
 
 export class Account extends IdDocument{
     username: string;
@@ -23,7 +23,11 @@ export class Account extends IdDocument{
 
         
         this.descriptor.className = 'Account'
+
+        //abilito la classe per le chiamate webapi
         this.descriptor.enabledForWebApi = true;
+
+        //abilito il metodo methodProva per le chiamate POST
         this.descriptor.enabledMethodsForPost = ['methodProva'];
         
     }

@@ -1,5 +1,5 @@
-import { Descriptor } from "../Descriptor";
-import { DynamicClass } from "../Structure";
+import { Descriptor } from "../Descriptor/Descriptor";
+import { DynamicClass } from "../Structure/Structure";
 import { DatabaseService, QueryParam, SelectCondition } from "../../Services/Database/Database.singleton";
 
 export class IdDocument{

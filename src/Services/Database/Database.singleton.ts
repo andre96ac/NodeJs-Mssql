@@ -59,7 +59,7 @@ export class DatabaseService{
     /**
      * Esegue una query sul db
      * ############# ATTENZIONE! utilizzare solo stringhe parametrizzate per prevenire sql injecion #############
-     * @param strQuery la stringa TEMPLATE (es: SELECT @colonna FROM @tabella )
+     * @param strQuery la stringa TEMPLATE (es: SELECT @colonna FROM @tabella ) secondo specifiche Mssql
      * @param queryParams l'oggetto contenente i parametri (es: {colonna: 'nome', tabella: 'utente'})
      */
     private _query(strQuery:string, queryParams:QueryParam | QueryParam[]){

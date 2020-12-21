@@ -2,7 +2,7 @@
 
 
 
-import { IdDocument } from "../../Library/IdDocument/IdDocument.document";
+import { IdDocument } from "../../../Library/IdDocument/IdDocument.document";
 
 export class Registrazione extends IdDocument{
     nome: string;
