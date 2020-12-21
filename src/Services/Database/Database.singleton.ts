@@ -8,10 +8,11 @@ export class DatabaseService{
 
     //##########################region parametri di connessione al DB Mssql ##########################
     private configParams : database.config = {
-        server: 'DESKTOP-AKJ3HOS\\SQLEXPRESS',
-        user: 'sa',
-        password: 'prova1234',
-        database: 'RegistrazioneSeminario',
+
+        server: '', //server name here
+        user: '', //DB account username here
+        password: '', //DB account psw here
+        database: '', //DB name here
     };
     //#endregion
 
