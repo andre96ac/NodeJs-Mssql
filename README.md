@@ -1,11 +1,11 @@
-# NodeJs-Mssql
+## NodeJs-Mssql
 Semplice pattern di sviluppo per la creazione rapida di un backend in NodeJs, in grado di interfacciarsi con un DB Mssql e di esporlo tramite WebApi
 
 NodeJs-Mssql rappresenta un esempio di workflow rapido per il setup di un'applicazione backend tramite node.
 Tutte le procedure di interazione col database utilizzano la logica dei "PreparedStatements", rendendo l'architettura robusta e immune da eventuali attacchi SqlInjection
 
 
-UTILIZZO: 
+# UTILIZZO: 
 
 Setup:
 Dopo aver preparato il DB e aver impostato i parametri di connessione nella classe DatabaseService, sarà possibile semplicemente creando delle classi "modello" ereditate dalla classe IdDocument che rispecchino le proprietà delle tabelle del Db, ottenere l'accesso alle stesse tramite WebApi. Per definire le limitazioni di ciò che sarà esposto, sarà possibile impostare, per ogni modello, la proprietà "descriptor" ereditata da idDocument.
@@ -20,7 +20,7 @@ Per l'interazione diretta con il db, la classe Database mette a disposizione i m
 
 
 
-ESEMPI DI UTILIZZO:
+# ESEMPI DI UTILIZZO:
 
 All'interno della cartella src/Documents/Examples sono presenti quattro esempi di modelli che fanno riferimento ad'altrettante tabelle di un ipotetico DB; di questi, solo Evento e Account sono esposti alle WebApi, tramite l'apposita proprietà 'enabledForWebApi' dell'oggetto descriptor. 
 Nel modello Account, è inoltre stato definito un metodo custom 'methodProva' a cui è possibile accedere tramite chiamata POST 
